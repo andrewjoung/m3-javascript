@@ -3,6 +3,19 @@
 ## Overview
 As you know, all visual elements on a webpage are HTML elements, styled using CSS: JavaScript is what will bring those elements to life.  JavaScript is a **scripting language** used to process data, create/manipulate HTML elements, and assign events (i.e, click, hover, etc.) to those elements.  The vast majority of the code you will write in this course will be JavaScript, and you should feel confident in your functional programming skills in the language.  
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
+
+- [Resources](#resources)
+- [Getting Started](#getting-started)
+- [Variables](#variables)
+- [Variable Scope](#variable-scope)
+- [Arrays](#arrays)
+- [DOM Manipulation](#dom-manipulation)
+- [Events](#events)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Resources
 Here are some helpful resources to help guide your exploration of JavaScript:
@@ -62,7 +75,7 @@ $(function() {
 });
 ```
 ## Variables
-Like other scripting languages, JavaScript allows you to store information inside of variables you create.  JavaScript is **loosely typed**, so there is no need to specify the type of variable you wish to create:
+Like other scripting languages, JavaScript allows you to store information inside of variables you create.  JavaScript is **loosely typed**, so there is no need to specify the type of variable you wish to create. To specify the creation of a variable, use the `var` keyword (see below). By convention, each line of JavaScript code ends with a semicolon (`;`):
 
 ```javascript
 // Create a numeric variable `x`
@@ -88,6 +101,7 @@ var person = {
 
 // Access object values using their key-values
 person.name // returns 'steve'
+person['name'] // also returns 'steve'
 person.favorites // returns the full `favorites` objects
 person.favorites.foods // returns ['pizza', 'salad', 'yogurt']
 person.favorites.foods[1] // returns 'salad'
@@ -112,13 +126,13 @@ Here are some brief examples for accessing properties/methods:
 var data = [1, 2, 3];
 
 // Determine how many observations are in the dataset using the `length` property
-num_obs = data.length;
+var num_obs = data.length;
 
 // Add a new observation into the array of data using the `push` method
 data.push(4) // data is now [1, 2, 3, 4]
 
 // Use the filter methods to determine which numbers are greater than 2
-greater_than_two = data.filter(function(d){return d>2 })
+var greater_than_two = data.filter(function(d){return d>2 })
 
 // Note: data is unchanged, and filter took a `function` as it's parameter.  
 ```
