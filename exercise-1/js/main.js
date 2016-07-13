@@ -18,3 +18,4 @@ var str = "this is a sentence";
 // Write a function to test if a string contains a word, and returns a boolean value.
 
 // Pass a phrase and a string to your function to determine that it works
+console.log('shoes');
